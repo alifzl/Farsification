@@ -1,0 +1,122 @@
+{
+    "name": "Farsification",
+    "displayName": "In-Code Farsi Translations",
+    "description": "A tool to improve the efficiency of the translation, especially for the localization of Non-Persian documentations",
+    "version": "0.1.0",
+    "publisher": "Ali Fazeli",
+    "repository": "https://github.com/alifzl/Farsification",
+    "engines": {
+        "vscode": "^1.67.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "keywords": [
+        "translate",
+        "translator",
+        "translation",
+        "google translate",
+        "interpret"
+    ],
+
+    "icon": "images/icon.png",
+    "activationEvents": [
+        "*"
+    ],
+    "main": "./dist/extension.js",
+    "contributes": {
+        "commands": [{
+                "command": "translatorHelper.translateInsert",
+                "title": "Translate & Insert"
+            },
+            {
+                "command": "translatorHelper.reverseTranslateInsert",
+                "title": "Reverse Translate & Insert"
+            },
+            {
+                "command": "translatorHelper.translate",
+                "title": "Translate"
+            }
+        ],
+        "keybindings": [{
+                "command": "translatorHelper.translateInsert",
+                "key": "alt+t",
+                "when": "editorTextFocus"
+            },
+            {
+                "command": "translatorHelper.reverseTranslateInsert",
+                "key": "shift+alt+t",
+                "when": "editorTextFocus"
+            },
+            {
+                "command": "translatorHelper.translate",
+                "key": "ctrl+t",
+                "when": "editorHasSelection"
+            }
+        ],
+        "configuration": {
+            "title": "Farsification",
+            "properties": {
+                "translatorHelper.api": {
+                    "type": "string",
+                    "default": "google",
+                    "enum": [
+                        "google"
+                    ],
+                    "enumDescriptions": [
+                        "Google Translation API."
+                    ],
+                    "description": "Specify the api to translate the text."
+                },
+                "translatorHelper.sourceLanguage": {
+                    "type": "string",
+                    "default": "zh-CN",
+                    "description": "The source language to be translated."
+                },
+                "translatorHelper.targetLanguage": {
+                    "type": "string",
+                    "default": "fa",
+                    "description": "The target language."
+                },
+                "translatorHelper.enableSelectionHoverTranslation": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Enable the hover translation when you selected a text in VSCode."
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run package",
+        "compile": "webpack",
+        "watch": "webpack --watch",
+        "package": "webpack --mode production --devtool hidden-source-map",
+        "compile-tests": "tsc -p . --outDir out",
+        "watch-tests": "tsc -p . -w --outDir out",
+        "pretest": "npm run compile-tests && npm run compile && npm run lint",
+        "lint": "eslint src --ext ts",
+        "test": "node ./out/test/runTest.js",
+        "deploy": "vsce publish --yarn"
+    },
+    "devDependencies": {
+        "@types/glob": "^7.2.0",
+        "@types/got": "^9.6.12",
+        "@types/mocha": "^9.1.1",
+        "@types/node": "14.x",
+        "@types/vscode": "^1.67.0",
+        "@typescript-eslint/eslint-plugin": "^5.21.0",
+        "@typescript-eslint/parser": "^5.21.0",
+        "@vscode/test-electron": "^2.1.3",
+        "eslint": "^8.14.0",
+        "glob": "^8.0.1",
+        "mocha": "^9.2.2",
+        "ts-loader": "^9.2.8",
+        "typescript": "^4.6.4",
+        "vsce": "^2.7.0",
+        "webpack": "^5.70.0",
+        "webpack-cli": "^4.9.2"
+    },
+    "dependencies": {
+        "@vitalets/google-translate-api": "^8.0.0"
+    }
+}
