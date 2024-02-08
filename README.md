@@ -18,6 +18,6 @@ See [Changelog](CHANGELOG.md)
 
 ### For more information
 
-- [GitHub Repository](https://github.com/alifzl/Farsification)
+Check [GitHub Repository](https://github.com/alifzl/Farsification)
 
 **Cheers!**
