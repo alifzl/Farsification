@@ -1,7 +1,7 @@
 import { workspace } from 'vscode';
 
 export const getConfiguration = <T>(key: string) => {
-  return workspace.getConfiguration('translatorHelper').get<T>(key);
+  return workspace.getConfiguration('farsification').get<T>(key);
 };
 
 export const getApiConfiguration = () => {

@@ -1,5 +1,5 @@
 {
-    "name": "Farsification",
+    "name": "farsification",
     "displayName": "In-Code Farsi Translations",
     "description": "A tool to improve the efficiency of the translation, especially for the localization of Non-Persian documentations",
     "version": "0.1.0",
@@ -18,38 +18,39 @@
         "google translate",
         "interpret"
     ],
-
     "icon": "images/icon.png",
     "activationEvents": [
         "*"
     ],
     "main": "./dist/extension.js",
     "contributes": {
-        "commands": [{
-                "command": "translatorHelper.translateInsert",
+        "commands": [
+            {
+                "command": "farsification.translateInsert",
                 "title": "Translate & Insert"
             },
             {
-                "command": "translatorHelper.reverseTranslateInsert",
+                "command": "farsification.reverseTranslateInsert",
                 "title": "Reverse Translate & Insert"
             },
             {
-                "command": "translatorHelper.translate",
+                "command": "farsification.translate",
                 "title": "Translate"
             }
         ],
-        "keybindings": [{
-                "command": "translatorHelper.translateInsert",
+        "keybindings": [
+            {
+                "command": "farsification.translateInsert",
                 "key": "alt+t",
                 "when": "editorTextFocus"
             },
             {
-                "command": "translatorHelper.reverseTranslateInsert",
+                "command": "farsification.reverseTranslateInsert",
                 "key": "shift+alt+t",
                 "when": "editorTextFocus"
             },
             {
-                "command": "translatorHelper.translate",
+                "command": "farsification.translate",
                 "key": "ctrl+t",
                 "when": "editorHasSelection"
             }
@@ -57,7 +58,7 @@
         "configuration": {
             "title": "Farsification",
             "properties": {
-                "translatorHelper.api": {
+                "farsification.api": {
                     "type": "string",
                     "default": "google",
                     "enum": [
@@ -68,17 +69,17 @@
                     ],
                     "description": "Specify the api to translate the text."
                 },
-                "translatorHelper.sourceLanguage": {
+                "farsification.sourceLanguage": {
                     "type": "string",
                     "default": "zh-CN",
                     "description": "The source language to be translated."
                 },
-                "translatorHelper.targetLanguage": {
+                "farsification.targetLanguage": {
                     "type": "string",
                     "default": "fa",
                     "description": "The target language."
                 },
-                "translatorHelper.enableSelectionHoverTranslation": {
+                "farsification.enableSelectionHoverTranslation": {
                     "type": "boolean",
                     "default": true,
                     "description": "Enable the hover translation when you selected a text in VSCode."
@@ -110,11 +111,11 @@
         "eslint": "^8.14.0",
         "glob": "^8.0.1",
         "mocha": "^9.2.2",
-        "ts-loader": "^9.2.8",
+        "ts-loader": "^9.5.1",
         "typescript": "^4.6.4",
         "vsce": "^2.7.0",
-        "webpack": "^5.70.0",
-        "webpack-cli": "^4.9.2"
+        "webpack": "^5.90.1",
+        "webpack-cli": "^4.10.0"
     },
     "dependencies": {
         "@vitalets/google-translate-api": "^8.0.0"
