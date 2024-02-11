@@ -1,6 +1,6 @@
 {
     "name": "farsification",
-    "displayName": "In-Code Farsi Translations",
+    "displayName": "farsification",
     "description": "A tool to improve the efficiency of the translation, especially for the localization of Non-Persian documentations",
     "version": "0.1.0",
     "publisher": "alifzl",
