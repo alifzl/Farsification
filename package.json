@@ -3,7 +3,7 @@
     "displayName": "In-Code Farsi Translations",
     "description": "A tool to improve the efficiency of the translation, especially for the localization of Non-Persian documentations",
     "version": "0.1.0",
-    "publisher": "Ali Fazeli",
+    "publisher": "alifzl",
     "repository": "https://github.com/alifzl/Farsification",
     "engines": {
         "vscode": "^1.67.0"
