@@ -1,7 +1,7 @@
 # Farsification
 
 
-This repo aims fo be the home for any Language to Persian (Farsi) translator in Microsoft Visual Studio Code.
+This repo aims to be a home for [any Language] to [Persian](https://en.wikipedia.org/wiki/Persian_language) translator in [Microsoft Visual Studio Code](https://code.visualstudio.com/).
 
 >
     Name: In-Code Farsi Translations
@@ -10,6 +10,12 @@ This repo aims fo be the home for any Language to Persian (Farsi) translator in 
     Version: 0.1.0
     Publisher: alifzl
     VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=alifzl.farsification
+
+
+
+## How to Use?
+
+`ALT + T`
 
 
 ## Known Issues
